@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Kafe - Kopi Senja</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f1e7;
+            color: #3e2723;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #4e342e;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* NAVIGASI */
+        nav {
+            background-color: #795548;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffcc80;
+        }
+
+        /* BAGIAN UTAMA */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #d7ccc8;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 17px;
+        }
+
+        /* MENU */
+        .menu {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .menu h2 {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .menu-card {
+            background-color: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .menu-card h3 {
+            margin: 15px 0 10px;
+            font-size: 21px;
+        }
+
+        .menu-card p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .harga {
+            color: #795548;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* TOMBOL */
+        button {
+            background-color: #795548;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4e342e;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #4e342e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .menu-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>☕ KOPI SENJA</h1>
+        <p>Tempat Nongkrong Nyaman dan Penuh Cerita</p>
+    </header>
+
+    <!-- NAVIGASI -->
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#menu">Menu</a>
+        <a href="#tentang">Tentang Kami</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+    <!-- BERANDA -->
+    <section class="hero" id="beranda">
+        <h2>Selamat Datang di Kopi Senja</h2>
+        <p>
+            Nikmati berbagai pilihan kopi dan makanan lezat
+            dengan suasana kafe yang nyaman.
+        </p>
+    </section>
+
+    <!-- DAFTAR MENU -->
+    <section class="menu" id="menu">
+        <h2>Daftar Menu Kami</h2>
+
+        <h3>☕ Menu Minuman</h3>
+        <br>
+
+        <div class="menu-container">
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500"
+                alt="Es Kopi Susu">
+                <h3>Es Kopi Susu</h3>
+                <p>Kopi espresso dengan susu segar.</p>
+                <div class="harga">Rp18.000</div>
+                <button onclick="pesan('Es Kopi Susu')">
+                    Pesan Sekarang
+                </button>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=500"
+                alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Perpaduan kopi dan susu berbusa.</p>
+                <div class="harga">Rp22.000</div>
+                <button onclick="pesan('Cappuccino')">
+                    Pesan Sekarang
+                </button>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=500"
+                alt="Chocolate">
+                <h3>Ice Chocolate</h3>
+                <p>Minuman cokelat manis dan menyegarkan.</p>
+                <div class="harga">Rp20.000</div>
+                <button onclick="pesan('Ice Chocolate')">
+                    Pesan Sekarang
+                </button>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <h3>🍰 Menu Makanan</h3>
+        <br>
+
+        <div class="menu-container">
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500"
+                alt="Croissant">
+                <h3>Croissant</h3>
+                <p>Roti pastry renyah dan lembut.</p>
+                <div class="harga">Rp15.000</div>
+                <button onclick="pesan('Croissant')">
+                    Pesan Sekarang
+                </button>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500"
+                alt="Donat">
+                <h3>Donat Cokelat</h3>
+                <p>Donat lembut dengan topping cokelat.</p>
+                <div class="harga">Rp12.000</div>
+                <button onclick="pesan('Donat Cokelat')">
+                    Pesan Sekarang
+                </button>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500"
+                alt="Pizza">
+                <h3>Mini Pizza</h3>
+                <p>Pizza mini dengan keju melimpah.</p>
+                <div class="harga">Rp25.000</div>
+                <button onclick="pesan('Mini Pizza')">
+                    Pesan Sekarang
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TENTANG KAMI -->
+    <section class="hero" id="tentang">
+        <h2>Tentang Kami</h2>
+        <p>
+            Kopi Senja adalah kafe yang menyediakan berbagai
+            minuman kopi dan makanan dengan harga terjangkau.
+            Kami hadir untuk memberikan pengalaman terbaik
+            bagi setiap pelanggan.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="kontak">
+        <h3>KOPI SENJA</h3>
+        <p>Alamat: Palembang, Sumatera Selatan</p>
+        <p>Instagram: @kopisenja</p>
+        <p>&copy; 2026 Kopi Senja. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function pesan(namaMenu) {
+            alert("Terima kasih! Anda memilih menu " + namaMenu);
+        }
+    </script>
+
+</body>
+</html>
